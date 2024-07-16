@@ -1,5 +1,6 @@
 ﻿CREATE TABLE [Person].[Password] (
     [BusinessEntityID] INT              NOT NULL,
+    [Test1] INT,
     [PasswordHash]     VARCHAR (128)    NOT NULL,
     [PasswordSalt]     VARCHAR (10)     NOT NULL,
     [rowguid]          UNIQUEIDENTIFIER CONSTRAINT [DF_Password_rowguid] DEFAULT (newid()) ROWGUIDCOL NOT NULL,
