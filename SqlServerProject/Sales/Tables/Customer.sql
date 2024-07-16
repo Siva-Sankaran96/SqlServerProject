@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [Sales].[Customer] (
     [CustomerID]    INT              IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
-    [PersonID]      INT              NULL,
+    [PersonID]      INT              NOT NULL,
     [StoreID]       INT              NULL,
     [TerritoryID]   INT              NULL,
     [AccountNumber] AS               (isnull('AW'+[dbo].[ufnLeadingZeros]([CustomerID]),'')),
