@@ -1,14 +1,13 @@
 ﻿CREATE TABLE [Person].[Password] (
     [BusinessEntityID] INT              NOT NULL,
-<<<<<<< HEAD
+
     [PasswordHash]     VARCHAR (128)     NULL,
     [PasswordSalt]     VARCHAR (10)      NULL,
     [master] varchar(max),
-=======
+
     [Test1] INT,
-    [PasswordHash]     VARCHAR (128)    NOT NULL,
-    [PasswordSalt]     VARCHAR (10)     NOT NULL,
->>>>>>> feature3
+ 
+
     [rowguid]          UNIQUEIDENTIFIER CONSTRAINT [DF_Password_rowguid] DEFAULT (newid()) ROWGUIDCOL NOT NULL,
     [ModifiedDate]     DATETIME         CONSTRAINT [DF_Password_ModifiedDate] DEFAULT (getdate()) NOT NULL,
     CONSTRAINT [PK_Password_BusinessEntityID] PRIMARY KEY CLUSTERED ([BusinessEntityID] ASC),
